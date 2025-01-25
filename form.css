@@ -1,0 +1,356 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.01);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 14px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.resume-output {
+    display: none;
+    margin-top: 40px;
+}
+
+#resumeContent {
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.resume-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.resume-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header div {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.resume-header h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.resume-header p {
+    margin: 5px 0;
+    color: #7f8c8d;
+    font-size: 15px;
+}
+
+.resume-section {
+    margin-top: 30px;
+}
+
+.resume-section h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #3498db;
+    font-weight: 600;
+    border-bottom: 2px solid #66db34;
+    padding-bottom: 6px;
+}
+
+.resume-section ul {
+    margin-left: 30px;
+    list-style-type: disc;
+}
+
+.resume-section p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 15px;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table td input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.resume-output button {
+    margin-top: 25px;
+    font-size: 18px;
+    width: 100%;
+    padding: 14px;
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.resume-output button:hover {
+    background-color: #27ae60;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .resume-header h3 {
+        font-size: 26px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 95%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .resume-header h3 {
+        font-size: 24px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+
+    table th, table td {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .resume-header h3 {
+        font-size: 22px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+    }
+
+    .resume-header img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .resume-header h3 {
+        font-size: 20px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 11px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    table th, table td {
+        font-size: 11px;
+    }
+
+    .resume-header img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        width: 95%;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .resume-header h3 {
+        font-size: 18px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 10px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    table th, table td {
+        font-size: 10px;
+    }
+
+    .resume-header img {
+        width: 70px;
+        height: 70px;
+    }
+}

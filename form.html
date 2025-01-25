@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Generator</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Your Resume</h1>
+
+        <form id="resumeForm">
+            
+            <div class="form-group">
+                <label for="photo">Upload Profile Photo:</label>
+                <input type="file" id="photo" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="summary">Professional Summary:</label>
+                <textarea id="summary" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="skills">Skills (comma separated):</label>
+                <input type="text" id="skills" required>
+            </div>
+
+            <div class="form-group">
+                <label>Qualification:</label>
+                <table id="qualificationTable">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Intermediate</td>
+                            <td><input type="text" name="intermediateDegree" required></td>
+                            <td><input type="text" name="intermediateInstitution" required></td>
+                            <td><input type="text" name="intermediateYear" required></td>
+                        </tr>
+                        <tr>
+                            <td>Undergraduate (UG)</td>
+                            <td><input type="text" name="ugDegree" required></td>
+                            <td><input type="text" name="ugInstitution" required></td>
+                            <td><input type="text" name="ugYear" required></td>
+                        </tr>
+                        <tr>
+                            <td>Postgraduate (PG)</td>
+                            <td><input type="text" name="pgDegree" required></td>
+                            <td><input type="text" name="pgInstitution" required></td>
+                            <td><input type="text" name="pgYear" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+
+        <div id="resumeOutput" class="resume-output">
+            <h2>Generated Resume:</h2>
+            <div id="resumeContent"></div>
+            <button onclick="downloadResume()">Download Resume</button>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="form.js"></script>
+</html>

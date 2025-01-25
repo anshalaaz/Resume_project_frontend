@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#Nav {
+    height: 48px;
+    background-color: rgb(255, 251, 235);
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+}
+
+#Nav a {
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.login {
+    width: 55px;
+    height: 20px;
+    margin: 8px;
+}
+
+.login button {
+    background-color: rgba(0, 0, 0, 0.714);
+    color: white;
+    border-radius: 14%;
+    font-size: 14px;
+}
+
+#main {
+    min-height: 450px;
+    font-style: italic;
+    justify-items: center;
+    position: relative;
+    text-align: center;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    position: relative;
+    top: 100px;
+}
+
+#logo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#main div {
+    position: relative;
+    top: 100px;
+}
+
+#main div button {
+    position: relative;
+    right: 5px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 1263px;
+    max-height: 370px;
+}
+
+footer {
+    background-color: rgb(255, 251, 235);
+    color: #000000;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f4a261;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 5px 0;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #000000;
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 1200px) {
+    #Nav a {
+        font-size: 14px;
+    }
+
+    #main {
+        min-height: 400px;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .footer-section {
+        flex: 1 1 45%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #Nav a {
+        font-size: 14px;
+    }
+
+    #logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer-section {
+        flex: 1 1 45%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #Nav {
+        padding: 15px;
+        justify-content: space-between;
+    }
+
+    #Nav a {
+        margin-right: 15px;
+        font-size: 14px;
+    }
+
+    #logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #Nav {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #Nav a {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    #logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #main {
+        min-height: 350px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #Nav {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #Nav a {
+        margin-right: 0;
+        margin-bottom: 8px;
+        font-size: 13px;
+    }
+
+    #logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #main {
+        min-height: 300px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
